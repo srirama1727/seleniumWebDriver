@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MySuite">
+<listeners>
+<listener class-name="Project.CustomListener"></listener>
+</listeners>
+  <test thread-count="5" name="MyTest1">
+	<classes>
+		<class name="Project.TestClass1">
+			<methods>
+				<include name = "m1"/>
+			</methods>
+		</class>
+		<class name="Project.TestClass2">
+				<methods>
+				<include name = "m3"/>
+			</methods>
+		</class>
+	</classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="MyTest2">
+	<classes>
+		<class name="Project.TestClass1">
+			<methods>
+				<include name = "m2"/>
+			</methods>
+		</class>
+		<class name="Project.TestClass2">
+				<methods>
+				<include name = "m4"/>
+			</methods>
+		</class>
+	</classes>
+  </test> <!-- Test -->
+    <test thread-count="5" name="MyTest3">
+	<classes>
+		<class name="Project.TestClass1">
+			<methods>
+				<include name = "m2"/>
+			</methods>
+		</class>
+		<class name="Project.TestClass3">
+				<methods>
+				<include name = "m5"/>
+			</methods>
+		</class>
+				<class name="Project.TestClass2">
+				<methods>
+				<include name = "m3"/>
+			</methods>
+		</class>
+	</classes>
+  </test> <!-- Test -->
+      <test thread-count="5" name="MyTest4">
+	<classes>
+		<class name="Project.TestClass1">
+			<methods>
+				<include name = "m2"/>
+			</methods>
+		</class>
+		<class name="Project.TestClass3">
+				<methods>
+				<include name = "m6"/>
+			</methods>
+		</class>
+				<class name="Project.TestClass2">
+				<methods>
+				<include name = "m3"/>
+			</methods>
+		</class>
+	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
